@@ -1,0 +1,50 @@
+//&& !empty($_POST['masa']) && !empty($_POST['velocidad']) 
+     		//&& !empty($_POST['mod'])
+
+<!-- Masa (Toneladas):
+
+          <input type="text" name="masa" value="<?php echo $_POST['masa'];?>" />
+
+          <?php
+
+               if (isset($_POST['introducir'])) {
+               	if(empty($_POST['masa'])) 					
+                    	echo "<span style='color:red'> &lt;-- Debe introducir la masa!!</span>"
+                  elseif($_POST['masa'] < 1 || $_POST['masa'] > 1000000000)
+                  	echo "<span style='color:red'> &lt;-- Masa fuera de rango!!</span>"
+                   
+					}
+          ?><br />
+ -->
+          <!-- Vel. traslación (Km/s):
+
+          <input type="text" name="velocidad" value="<?php echo $_POST['velocidad'];?>" />
+
+          <?php
+          
+					if (isset($_POST['introducir'])) {
+               	if(empty($_POST['velocidad'])) 					
+                    	echo "<span style='color:red'> &lt;-- Debe introducir la velocidad!!</span>"
+                  elseif($_POST['velocidad'] < 1 || $_POST['velocidad'] > 100)
+                  	echo "<span style='color:red'> &lt;-- Velocidad fuera de rango!!</span>"
+                   
+					}               
+
+          ?><br />
+          
+          Distancia min. orbital (MOD):
+
+          <input type="text" name="mod" value="<?php echo $_POST['mod'];?>" />
+
+          <?php
+					if (isset($_POST['introducir'])) {
+						
+               	if(empty($_POST['mod'])) 					
+                    	echo "<span style='color:red'> &lt;-- Debe introducir la distancia!!</span>"
+                  elseif($_POST['mod'] < 0.001 || $_POST['mod'] >1)
+                  	echo "<span style='color:red'> &lt;-- Distancia fuera de rango!!</span>"
+                  	  
+					}     
+               
+
+          ?><br /> -->

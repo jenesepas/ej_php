@@ -1,0 +1,15 @@
+<?php
+
+// Utilizamos el código (La clase) construida en este archivo:
+require_once('matematicas.php');
+
+
+// Sin WSDL es obligatorio el uri que especifica el directorio del servicio WEB
+$server = new SoapServer(null, array('uri'=>""));
+//Con WSDL
+//$server = new SoapServer("http://localhost/php/ut06/ej2/server/02SERVER_SI_W.wsdl");
+
+$server->setClass('matematicas');
+$server->handle();
+?>
+

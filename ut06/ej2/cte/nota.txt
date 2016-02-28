@@ -1,0 +1,11 @@
+para generar el php desde fichero wsdl en linux:
+
+1. install wsdl2php.
+2. $ sudo wsdl2php http://locaqlhost/php/ut06/server/servicio.php?wsdl
+   (ruta donde tengamos el archivo servicio.wsdl. servicio.php?wsdl tb vale)
+
+3. index.php en cte, require_one('Matematicas.php') y new Matematicas().
+(ver fuentes de /ut06/cte).
+
+(pdf explicativo de ejemplos es para win, no seguirlo si estamos en linux,
+los pasos de conversion, los demas si.)

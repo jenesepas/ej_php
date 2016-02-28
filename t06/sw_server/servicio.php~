@@ -1,0 +1,14 @@
+<?php
+
+// Utilizamos el código (La clase) construida en este archivo:
+require_once('discos.php');
+
+
+// Sin WSDL es obligatorio el uri que especifica el directorio del servicio WEB
+// Para generar el archivo .wsdl.
+$server = new SoapServer(null, array('uri'=>""));
+
+
+$server->setClass('discos');
+$server->handle();
+?>
