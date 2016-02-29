@@ -1,0 +1,32 @@
+[
+ {"curso":"DAW",
+   "alumnos":
+   [
+     {"nombre":"raul","apellido":"serrano"},
+     {"nombre":"jose","apellido":"sanchez"},
+     {"nombre":"laura","apellido":"perez"},
+     {"nombre":"pedro","apellido":"garcia"},
+     {"nombre":"sergio","apellido":"martinez"},
+     {"nombre":"rafa","apellido":"bou"},
+     {"nombre":"olivia","apellido":"sanz"},
+     {"nombre":"raul","apellido":"perez"},
+     {"nombre":"juan","apellido":"sanchez"}
+    ]
+ },
+ {"curso":"ASIR",
+   "alumnos":
+    [
+     {"nombre":"ana","apellido":"hermida"},
+     {"nombre":"alex","apellido":"la hoz"},
+     {"nombre":"laura","apellido":"pinar"},
+     {"nombre":"sergio","apellido":"gil"},
+     {"nombre":"fran","apellido":"serrano"},
+     {"nombre":"adolto","apellido":"vara"},
+     {"nombre":"jose","apellido":"eras"},
+     {"nombre":"luis","apellido":"sanchez"},
+     {"nombre":"elias","apellido":"serrano"},
+     {"nombre":"pedro","apellido":"saez"}
+    ]
+ }
+]
+
