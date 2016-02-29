@@ -54,16 +54,28 @@ function estadoPeticion()
 		// Lo que recibimos en formato JSON es un string que representa un array [ ... ] que contiene objetos literales {...},{...},... 
 		/* Ejemplo: [ {"id":"2","nombrecentro":"IES A Piringalla","localidad":"Lugo","provincia":"Lugo","telefono":"982212010","fechavisita":"2010-11-26","numvisitantes":"85"} , {"id":"10","nombrecentro":"IES As Fontiñas","localidad" : ..... } ]  */
 		
-		// Asignamos a la variable resultados la evaluación de responseText
+		// Asignamos a la variable resultados la evaluación de responseText	
 		var resultados=eval( '(' +this.responseText+')');
 
 		texto = "<table border=1><tr><th>ALUMNOS</th></tr>";
 		// Hacemos un bucle para recorrer todos los objetos literales recibidos en el array resultados y mostrar su contenido.
 		for (var i=0; i < resultados.length; i++) 
-		{
+		{						
 			objeto = resultados[i];
-			texto+="<tr><td>"+objeto.curso.alumnos.nombre+"</td><td>"+objeto.curso.alumnos.apellido+"</td></tr>";
+			
+			texto+="<tr><td>"+objeto.curso+"</td></tr>";
+			
+			// Para cada curso leemos los alumnos
+			alumnos=objeto.alumnos;
+			for (var z=0; z < alumnos.length; z++) 
+			{
+				texto+="<tr><td>"+alumnos[z].nombre+"</td><td>"+alumnos[z].apellido+"</td></tr>";
+			}
+			
 		}
+		texto+="</table>";
+		//alert("texto: "+texto);
+
 	
 		// Desactivamos el indicador AJAX cuando termina la petición
 		//document.getElementById("indicador").innerHTML="";

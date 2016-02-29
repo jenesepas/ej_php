@@ -54,21 +54,58 @@ function estadoPeticion()
 		// Lo que recibimos en formato JSON es un string que representa un array [ ... ] que contiene objetos literales {...},{...},... 
 		/* Ejemplo: [ {"id":"2","nombrecentro":"IES A Piringalla","localidad":"Lugo","provincia":"Lugo","telefono":"982212010","fechavisita":"2010-11-26","numvisitantes":"85"} , {"id":"10","nombrecentro":"IES As Fontiñas","localidad" : ..... } ]  */
 		
-		// Asignamos a la variable resultados la evaluación de responseText
+		// Asignamos a la variable resultados la evaluación de responseText	
 		var resultados=eval( '(' +this.responseText+')');
 
-		texto = "<table border=1><tr><th>ALUMNOS</th></tr>";
+		//creamos nuevo nodo para la tabla	
+		var tabla = document.createElement('table');
+		tabla.setAttribute('border','1');
+		
+		document.getElementsByTagName('body')[0].appendChild(tabla); 
+		//nuevo nodo para titulo
+		var titulo = document.createElement('th');	
+		var text_titulo = document.createTextNode('ALUMNOS');
+		titulo.appendChild(text_titulo);
+		document.getElementsByTagName('table')[0].appendChild(titulo);		
+		
+		//contamos el num de filas de la tabla (la 0 es el titulo)
+		var n_filas=0;	
 		// Hacemos un bucle para recorrer todos los objetos literales recibidos en el array resultados y mostrar su contenido.
 		for (var i=0; i < resultados.length; i++) 
-		{
+		{						
 			objeto = resultados[i];
-			texto+="<tr><td>"+objeto.alumnos.nombre+"</td><td>"+objeto.alumnos.apellido+"</td></tr>";
+			
+			var fila = document.createElement('tr');				
+			document.getElementsByTagName('table')[0].appendChild(fila);
+			n_filas++;
+							
+			var columna = document.createElement('td');	
+			var text_columna = document.createTextNode(objeto.curso);
+			columna.appendChild(text_columna);
+			document.getElementsByTagName('table')[0].childNodes[n_filas].appendChild(columna);						
+					
+			// Para cada curso leemos los alumnos
+			alumnos=objeto.alumnos;
+			for (var z=0; z < alumnos.length; z++) 
+			{
+				var fila = document.createElement('tr');				
+				document.getElementsByTagName('table')[0].appendChild(fila);
+				n_filas++;				
+				
+				var columna = document.createElement('td');	
+				var text_columna = document.createTextNode(alumnos[z].nombre);
+				columna.appendChild(text_columna);
+				document.getElementsByTagName('table')[0].childNodes[n_filas].appendChild(columna);
+				
+				var columna = document.createElement('td');	
+				var text_columna = document.createTextNode(alumnos[z].apellido);
+				columna.appendChild(text_columna);
+				document.getElementsByTagName('table')[0].childNodes[n_filas].appendChild(columna);				
+			}
+			
 		}
+
 	
-		// Desactivamos el indicador AJAX cuando termina la petición
-		//document.getElementById("indicador").innerHTML="";
 		
-		// Imprimimos la tabla dentro del contenedor resultados.
-		document.getElementById("resultados").innerHTML=texto;
 	}
 }
