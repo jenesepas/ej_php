@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- meta para asegurar la correcta visualización -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Hojas de estilo de jQuery Mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- lIbrerías de jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- librerias de jQuery Mobile-->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<!-- Pag. de Inicio -->
+<div data-role="page" id="inicio">
+  	<div data-role="header" style="text-align:center;">
+  		<div data-role="controlgroup" data-type="horizontal">	
+  			<a href="#inicio" class="ui-btn ui-icon-home ui-btn-icon-left">Inicio</a>
+    		<button class="ui-btn">Aeropuerto de Murcia</button>
+    		<a href="#enlace" class="ui-btn ui-icon-search ui-btn-icon-left">Buscar</a>
+    	</div>
+    	<div data-role="controlgroup" data-type="horizontal">	
+			<img  src="avion.jpg" height=200 width=200></img>    	
+    	</div>
+  	</div>
+
+  	<div data-role="main" class="ui-content">   		 				 		
+  		<ul data-role="listview">
+	      <li data-role="collapsible" data-iconpos="right" data-inset="false">
+	        <h2>Info Vuelos</h2>
+	        <ul data-role="listview" data-theme="b">
+	          <li><a href="#iberia">Iberia</a></li>
+	          <li><a href="#">Air Europa</a></li>
+	          <li><a href="#">Ryanair</a></li>	          
+	        </ul>
+	      </li>
+	      <li data-role="collapsible" data-iconpos="right" data-inset="false">
+	        <h2>En el Aeropuerto</h2>
+	        <ul data-role="listview" data-theme="b">
+	          <li><a href="#restaurantes">Restaurantes</a></li>
+	          <li><a href="#">Servicios</a></li>	 
+	          <li><a href="#">Mapa de la Terminal</a></li>        
+	        </ul>
+	      </li>
+	      <li data-role="collapsible" data-iconpos="right" data-inset="false">
+	        <h2>En Murcia</h2>
+	        <ul data-role="listview" data-theme="b">
+	          <li><a href="#">Hoteles</a></li>	
+	          <li><a href="#">Alquiler coches</a></li>
+	          <li><a href="#">Compras</a></li>          
+	        </ul>
+	      </li>
+    	</ul>	
+  	</div>
+		
+ 	<div data-role="footer" style="text-align:center;">
+		
+	</div>
+
+</div> <!-- fin pag. inicio -->
+
+
+<!-- Pag. Iberia -->
+<div data-role="page" id="iberia">
+  	<div data-role="header" style="text-align:center;">
+  		<div data-role="controlgroup" data-type="horizontal">	
+  			<a href="#inicio" class="ui-btn ui-icon-home ui-btn-icon-left">Inicio</a>
+    		<button class="ui-btn">Aeropuerto de Murcia</button>
+    		<a href="#enlace" class="ui-btn ui-icon-search ui-btn-icon-left">Buscar</a>
+    	</div>
+    	<div data-role="controlgroup" data-type="horizontal">	
+			<img  src="avion.jpg" height=200 width=200></img>    	
+    	</div>
+  	</div>
+
+  	<div data-role="main" class="ui-content">
+		<div data-role="content">    	
+	    	<h2>Aerolinea:</h2>        		
+	    	<h3>Iberia</h3>
+	    	<img  src="iberia.jpg" height=200 width=200></img>
+	    	<p>Hoy presentamos la nueva imagen de Iberia, una imagen que simboliza un profundo cambio en la compañía. Un proyecto iniciado hace tres años, en el que se han realizado casi 9.000 entrevistas. En ellas nuestros clientes nos dijeron que Iberia ya es una marca potente, pero nos pedían que se renovara manteniendo sus valores fundamentales.
+Por eso, Iberia está cambiando, para que volar con nosotros sea una experiencia única. La nueva imagen que presentamos es solo un avance, a finales de Noviembre se empezarán a realizar cambios en los elementos visibles más relevantes.</p>
+	    	<h3>Tlfno: +34 666 333 059 </h3>
+	    	<h3>Email: info@iberia.es</h3>
+	    	<br/>
+	    	<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" data-rel="back">Atrás</a>
+    	</div>
+  	</div>
+		
+ 	<div data-role="footer" style="text-align:center;">		
+	</div>
+
+</div> <!-- fin pag. Iberia -->
+
+
+<!-- Pag. de restaurantes -->
+<div data-role="page" data-dialog="true" id="restaurantes">
+	<div data-role="header">  	
+  		<h1>Restaurantes</h1>
+  	</div>
+
+  	<div data-role="main" class="ui-content">
+    	<a href="#" class="ui-btn ui-icon-eye ui-btn-icon-right">Restaurante español</a>	  
+		<a href="#" class="ui-btn ui-icon-eye ui-btn-icon-right">Restaurante italiano</a>
+		<a href="#" class="ui-btn ui-icon-eye ui-btn-icon-right">Restaurante francés</a>
+		<a href="#" class="ui-btn ui-icon-eye ui-btn-icon-right">Restaurante chino</a>	  
+		<a href="#" class="ui-btn ui-icon-eye ui-btn-icon-right">Restaurante japones</a>
+		<a href="#" class="ui-btn ui-icon-eye ui-btn-icon-right">Restaurante indú</a>
+		<a href="#" class="ui-btn ui-icon-eye ui-btn-icon-right">Restaurante mexicano</a>
+		<a href="#" class="ui-btn ui-icon-eye ui-btn-icon-right">Restaurante americano</a>
+  	</div>
+		
+ 	<div data-role="footer" style="text-align:center;">				
+	</div>
+
+</div> <!-- fin pag. restaurantes -->
+
+
+</body>
+</html>
