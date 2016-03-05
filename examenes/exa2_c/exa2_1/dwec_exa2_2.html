@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> DWEC Exa1 - 2 - Juan Antonio Forte</title>
+<script type="text/javascript" >
+function equipo(p_nombre){
+	
+	this.nombre=p_nombre;
+	this.jugadores = [];
+	
+	this.añadir_jugador = function (){
+		
+		var p_nom_jug=prompt("Introduce el nombre de jugador:");
+		this.jugadores.push(p_nom_jug);
+		
+	}
+
+	this.eliminar_jugador = function (){
+		var numero=parseInt(prompt("Introduce el numero de jugador: (De 0 a "+(this.jugadores.length-1)+")"));
+		
+		if ((numero > -1) && (numero < this.jugadores.length))
+			this.jugadores.splice(numero,1)
+		else
+			alert("numero erroneo.");	
+	}
+   
+   this.listar_jugador = function (){
+		
+		for (var i=0;i<this.jugadores.length;i++)
+		{			
+			document.write("Equipo "+this.nombre+ ", jugador "+i+" es "+this.jugadores[i]+"<br/>");				
+		}
+		 
+	}
+	
+}
+</script>
+</head>
+<body>
+<h2>Ejercicio 2</h2>
+<script type="text/javascript" >
+
+var team = new equipo("Yeclano");
+
+//team.añadir_jugador("Pepe");
+//team.añadir_jugador("Juan");
+
+team.añadir_jugador();
+team.añadir_jugador();
+team.añadir_jugador();
+team.añadir_jugador();
+
+team.eliminar_jugador();
+team.listar_jugador();
+
+</script>
+</body>
+</html>

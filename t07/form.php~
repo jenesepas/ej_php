@@ -1,0 +1,25 @@
+<!-- Desarrollo Web en Entorno Servidor -->
+<!-- Tarea7: PHP, Javascript y Ajax. -->
+<?php require_once("validar1.php"); ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Form1</title>
+</head>
+<body>
+	<div>    
+    <fieldset width='400'>
+        <legend>Equipos de Baloncesto en la NBA:</legend>
+        <div>
+            <label for='nombre' >Nombre:</label>
+            <input type='text' name='nombre' id='nombre' maxlength="50" value="" />
+            <br />            
+				<span id='equipos'>Debe tener más de 3 caracteres.</span>	       
+        </div>               
+    </fieldset>
+  
+    </div>
+</body>
+</html>

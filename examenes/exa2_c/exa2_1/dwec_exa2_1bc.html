@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> DWEC Exa1 - 1a - Juan Antonio Forte</title>
+<script type="text/javascript" >
+function calcula_factorial(p_numero){
+	
+	var facto=1;	
+	for (var i=1;i<=p_numero;i++)
+	{			
+		facto = (facto * i); 				
+	}	
+	return facto;
+
+}
+</script>
+</head>
+<body>
+<h2>Ejercicio 1bc</h2>
+<script type="text/javascript" >
+	//var numero=parseInt(prompt("Introduce un numero: "));
+	
+	mes = new Date();
+	
+	
+	document.write("Factorial del dia "+mes.getDate()+" es: "+ calcula_factorial(mes.getDate()));
+</script>
+</body>
+</html>

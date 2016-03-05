@@ -6,7 +6,7 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Ejemplo Tema 7: Validación formulario</title>
+  <title>Ejemplo Tema 7: Validación formulario: con php.</title>
   <link rel="stylesheet" href="estilos.css" type="text/css" />
 </head>
 
