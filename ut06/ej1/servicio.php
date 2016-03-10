@@ -4,7 +4,7 @@
 require_once('matematicas.php');
 
 // Sin WSDL es obligatorio el uri que especifica el directorio del servicio WEB
-$server = new SoapServer(null, array('uri'=>"http://localhost/php/ut06/ej1"));
+$server = new SoapServer(null, array('uri'=>"http://localhost/ej_php/ut06/ej1"));
 
 $server->setClass('Matematicas');
 $server->handle();

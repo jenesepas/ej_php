@@ -1,8 +1,8 @@
 <?php
 
-$url="http://localhost/ej_php/ut06/ej0/servicio1.php";
+$url="http://localhost/php/ut06/ej0/servicio1.php";
 
-$uri="http://localhost/ej_php/ut06/ej0";
+$uri="http://localhost/php/ut06/ej0";
 
 $cliente = new SoapClient(null,array('location'=>$url,'uri'=>$uri));
 

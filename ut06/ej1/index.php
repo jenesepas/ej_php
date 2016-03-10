@@ -13,35 +13,39 @@ and open the template in the editor.
     <body>
 <?php
         
-$url="http://localhost/php/ut06/ej1/servicio.php";
+$url="http://localhost/ej_php/ut06/ej1/servicio.php";
 
 //Creamos un cliente para llamar a esa URL. 
 //Es obligatorio establecer el parámetro 'uri' al no tener WSDL el servidor!
 $cliente = new SoapClient(null,
                           array('location'=>$url, 
-                                'uri'=>"http://localhost/php/ut06/ej1"));
+                                'uri'=>"http://localhost/ej_php/ut06/ej1"));
 
 
 // Obtenemos el factorial de 4
-$numero = $cliente->FACTORIAL (4);
-print("Es: ".$numero);
+$num_ini=4;
+$numero = $cliente->FACTORIAL ($num_ini);
+print("El factorial de ".$num_ini." es: ".$numero);
 print "<br />";
 
 // Obtenemos el factorial de 5
-$numero = $cliente->FACTORIAL (5);
-print("Es: ".$numero);
+$num_ini=5;
+$numero = $cliente->FACTORIAL ($num_ini);
+print("El factorial de ".$num_ini." es: ".$numero);
 print "<br />";
 
 
-// Obtenemos el factorial de 6
-$numero = $cliente->FACTORIAL (6);
-print("Es: ".$numero);
+// Obtenemos el factorial de 8
+$num_ini=8;
+$numero = $cliente->FACTORIAL ($num_ini);
+print("El factorial de ".$num_ini." es: ".$numero);
 print "<br />";
 
 
-// Obtenemos el factorial de 7
-$numero = $cliente->FACTORIAL (7);
-print("Es: ".$numero);
+// Obtenemos el factorial de 10
+$num_ini=10;
+$numero = $cliente->FACTORIAL ($num_ini);
+print("El factorial de ".$num_ini." es: ".$numero);
 print "<br />"; 
 
 
