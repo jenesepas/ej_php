@@ -1,4 +1,5 @@
 para generar el php desde fichero wsdl en linux:
+//en carpeta cliente
 
 1. install wsdl2php.
 2.Nos vamos al directorio del cte. (o lo movemos alli despues)

@@ -3,7 +3,7 @@
 require_once('discos.php');
 
 
-$uri="http://localhost/php/t06/nw_server";
+$uri="http://localhost/ej_php/t06/nw_server";
 
 $server = new SoapServer(null,array('uri'=>$uri));
 

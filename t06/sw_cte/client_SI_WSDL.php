@@ -22,8 +22,8 @@ and open the template in the editor.
         $discos = new Discos ();
 
         // Obtenemos el nombre del musico con cod=30
-		   $nombre_musico = $discos->Dame_Nombre_Musico(30);
-			print("El nombre del musico 30 es: ".$nombre_musico);
+		   $nombre_musico = $discos->Dame_Nombre_Musico(20);
+			print("El nombre del musico 20 es: ".$nombre_musico);
 			print "<br />";
 			
 			//obtenemos el grupo y la fecha fundacion posterior a la fecha pasada.

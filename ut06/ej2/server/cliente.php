@@ -5,7 +5,7 @@
 //Con WSDL (2 opciones)
 //$cliente = new SoapClient("http://localhost/php/ut06/ej2/server/servicio.wsdl");
 
-$cliente = new SoapClient("http://localhost/php/ut06/ej2/server/servicio.php?wsdl");
+$cliente = new SoapClient("http://localhost/ej_php/ut06/ej2/server/servicio.php?wsdl");
 
   // Probamos a obtener el FACTORIAL de 5
   $valor = $cliente->FACTORIAL(5);

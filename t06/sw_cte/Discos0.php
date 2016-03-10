@@ -15,7 +15,7 @@ class Discos extends SoapClient {
   private static $classmap = array(
                                    );
 
-  public function Discos($wsdl = "http://localhost/ej_php/t06/sw_server/server_SI_WSDL.php?wsdl", $options = array()) {
+  public function Discos($wsdl = "http://localhost/php/t06/sw_server/server_SI_WSDL.php?wsdl", $options = array()) {
     foreach(self::$classmap as $key => $value) {
       if(!isset($options['classmap'][$key])) {
         $options['classmap'][$key] = $value;
@@ -32,7 +32,7 @@ class Discos extends SoapClient {
    */
   public function Dame_Nombre_Musico($cod_musico) {
     return $this->__soapCall('Dame_Nombre_Musico', array($cod_musico),       array(
-            'uri' => 'http://localhost/ej_php/t06/sw_server',
+            'uri' => 'http://localhost/php/t06/sw_server',
             'soapaction' => ''
            )
       );
@@ -47,7 +47,7 @@ class Discos extends SoapClient {
    */
   public function Dame_Grupo_Viejo($pais, $fecha) {
     return $this->__soapCall('Dame_Grupo_Viejo', array($pais, $fecha),       array(
-            'uri' => 'http://localhost/ej_php/t06/sw_server',
+            'uri' => 'http://localhost/php/t06/sw_server',
             'soapaction' => ''
            )
       );

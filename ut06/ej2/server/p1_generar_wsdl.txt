@@ -1,0 +1,17 @@
+Generar fichero wsdl, con ayuda de WSDLDocument.php:
+//Todo en la carpeta del server.
+
+1. Clases.php con las reglas de comentarios.
+
+2. Ponemos en la carpeta del proyecto el WSDLDocument.php.
+
+3. Construir el servicio.php(sin wsdl) y generadorWSDL.php.
+
+4. En consola, carpeta proyecto: php generadorWSDL.php>servicio.wsdl
+ (o en navegador, poner ruta de generadorWSDL.php, cod.fte. y copiar)
+
+5.Cambiar el servicio.php (con wsdl).
+
+6.Los archivos validos para el servicio web son:
+Clases.php, servicio.php, servicio.wsdl.
+

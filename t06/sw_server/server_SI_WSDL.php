@@ -4,8 +4,11 @@
 require_once('discos.php');
 
 
+// Para generar el archivo .wsdl.
+//$server = new SoapServer(null, array('uri'=>""));
+
 // publicacion de servicio
-$server = new SoapServer("http://localhost/php/t06/sw_server/server_SI_WSDL.wsdl");
+$server = new SoapServer("http://localhost/ej_php/t06/sw_server/server_SI_WSDL.wsdl");
 
 
 $server->setClass('discos');

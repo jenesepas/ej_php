@@ -13,13 +13,13 @@ and open the template in the editor.
     <body>
 <?php
         
-$url="http://localhost/php/t06/nw_server/server_NO_WSDL.php";
+$url="http://localhost/ej_php/t06/nw_server/server_NO_WSDL.php";
 
 //Creamos un cliente para llamar a esa URL. 
 //Es obligatorio establecer el parámetro 'uri' al no tener WSDL el servidor!
 $discos = new SoapClient(null,
                           array('location'=>$url, 
-                                'uri'=>"http://localhost/php/t06/nw_server"));
+                                'uri'=>"http://localhost/ej_php/t06/nw_server"));
 
 
 // Obtenemos el nombre del musico con cod=30
