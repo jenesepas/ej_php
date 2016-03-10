@@ -35,7 +35,7 @@ and open the template in the editor.
                     
             public function Visualiza_Objeto ()
                     {                   
-                     print("El objeto ".$this->numero_cosa." se llama: ".$this->nombre_cosa);
+                     print("El objeto se llama: ".$this->nombre_cosa);
                      print "<br />";
                     } // Fin de funcion Visualiza_Objeto ()                   
                     

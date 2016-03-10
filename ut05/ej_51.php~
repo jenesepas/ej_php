@@ -70,7 +70,7 @@ class Dron {
   // Funcion que permite cambiar el "color" de un dron despues de ser creado:
   public function Cambiar_Color_Dron ($nuevo_col)
   {
-    $this->color = $nuevo_col; // Se necesita esta función, pues "$color" es privado
+    $this->color->$nuevo_col; // Se necesita esta función, pues "$color" es privado
   }
   
   
